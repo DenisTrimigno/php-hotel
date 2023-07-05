@@ -52,7 +52,34 @@
     <title>Document</title>
 </head>
 <body>
-   
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <table class="table teble-striped">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Descrizione</th>
+                            <th>parcheggio</th>
+                            <th>Voto</th>
+                            <th>Distanza dal centro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <?php foreach($hotels as $hotel) { ?>
+                            <tr>
+                                <td><?php echo $hotel['name']; ?></td>
+                                <td><?php echo $hotel['description']; ?></td>
+                                <td><?php echo ($hotel['parking'] === true) ? 'yes' : 'no'; ?></td>
+                                <td><?php echo $hotel['vote'] ; ?></td>
+                                <td><?php echo $hotel['distance_to_center']; ?> m </td>
+                            </tr>
+                         <?php }?>   
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
   
     
 </body>
